@@ -1,5 +1,8 @@
 # One Button Lounge
 
+https://one-button-companion.onrender.com
+![One Button Lounge](docs/screenshot.png)
+
 A companion site for **[One Button](https://www.roblox.com/games/121388633171828)**, a multiplayer Roblox game where pressing a single button sets off one of 140+ random events. The site shows live leaderboards, a profile for every player, how deadly each event really is, and how rare each title is. It reads all of this straight from the game's own DataStores through Roblox Open Cloud.
 
 **Stack:** TypeScript end to end. React 19 + Vite on the frontend, Node + Express 5 on the backend, Vitest + Supertest for tests.
