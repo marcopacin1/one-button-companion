@@ -1,0 +1,17 @@
+# One-click deploy on Render (free tier). The API serves the built frontend too,
+# so it's a single web service with no CORS to configure.
+services:
+  - type: web
+    name: one-button-companion
+    runtime: node
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATA_SOURCE
+        value: live
+      - key: ROBLOX_UNIVERSE_ID
+        value: "10200693154"
+      - key: ROBLOX_API_KEY
+        sync: false # set in the Render dashboard, never in this file

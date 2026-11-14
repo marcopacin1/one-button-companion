@@ -1,0 +1,19 @@
+{
+  "name": "one-button-companion",
+  "private": true,
+  "description": "Companion site for the One Button Roblox game: live leaderboards, player profiles and event stats read from the game's DataStores through Roblox Open Cloud.",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace server & npm run dev --workspace web",
+    "build": "npm run build --workspace web && npm run build --workspace server",
+    "start": "npm run start --workspace server",
+    "test": "npm run test --workspace server",
+    "typecheck": "npm run typecheck --workspace server && npm run typecheck --workspace web"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
